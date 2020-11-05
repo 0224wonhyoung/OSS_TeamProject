@@ -169,6 +169,7 @@ Contents[2][2] = 1
 Contents[3][5] = 2
 Contents[2][8] = 3
 Contents[8][6] = 4
+
 def mapContents(x, y):
     global MapSizeX
     global MapSizeY
@@ -191,7 +192,7 @@ showmap()
 blocks = []
 for i in range(30):    
     blocks.append(Block(i//5, i%5, i//5))
-    blocks[i].setImageNum(mapContents((i//5) - 2, (i%5) -2))
+    blocks[i].setImageNum(mapContents((i%5) - 2, (i//5) -2))
     if i > 24:
         blocks[i].hide()
 
