@@ -176,10 +176,14 @@ def mapContents(x, y):
     X = int(x + 1+(MapSizeX-1)/2)
     Y = int(y + 1+(MapSizeY-1)/2)
     #print("x, y : %d, %d -> X, Y : %d, %d"%(x, y, X, Y))
-    if (-1 <= X <= (MapSizeX+1)) and (-1 <= Y <= (MapSizeY+1)):
+    if (0 <= X <= (MapSizeX+1)) and (0 <= Y <= (MapSizeY+1)):
         return Contents[X][Y]
-    #print("X, Y is over map : %d %d, so using block0 image"%(X, Y))
+    print("X, Y is over map : %d %d, so using block0 image"%(X, Y))
     return 0
+
+print(mapContents(-6,0))
+print(mapContents(-5,0))
+print(mapContents(-4,0))
 
 def showmap():
     global MapSizeX
